@@ -1,8 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 import {
   Calendar,
   MapPin,
@@ -15,28 +12,6 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function About() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.6 },
-    },
-  };
-
   const professionalHighlights = [
     {
       title: "Professional Background",
@@ -64,13 +39,8 @@ export default function About() {
 
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-[#1F2833]/30">
-      <div className="section-container" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
+      <div className="section-container">
+        <div className="mb-12">
           <h2 className="section-title">Professional Profile</h2>
           <p className="mt-4 text-lg text-[#1F2833]/80 dark:text-[#C5C6C7]/80 max-w-3xl">
             I am a seasoned professional with extensive experience across
@@ -79,104 +49,82 @@ export default function About() {
             sectors, complemented by significant involvement in community
             service and political advocacy.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12"
-        >
-          <motion.div variants={itemVariants}>
-            <Card className="card-hover bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20">
-              <CardContent className="p-6">
-                <div className="rounded-full w-12 h-12 bg-[#66FCF1]/10 flex items-center justify-center mb-4">
-                  <Calendar className="h-6 w-6 text-[#45A29E] dark:text-[#66FCF1]" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Born</h3>
-                <p className="text-[#1F2833]/70 dark:text-[#C5C6C7]/70">
-                  August 8, 1974
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <Card className="card-hover bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20">
+            <CardContent className="p-6">
+              <div className="rounded-full w-12 h-12 bg-[#66FCF1]/10 flex items-center justify-center mb-4">
+                <Calendar className="h-6 w-6 text-[#45A29E] dark:text-[#66FCF1]" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Born</h3>
+              <p className="text-[#1F2833]/70 dark:text-[#C5C6C7]/70">
+                August 8, 1974
+              </p>
+            </CardContent>
+          </Card>
 
-          <motion.div variants={itemVariants}>
-            <Card className="card-hover bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20">
-              <CardContent className="p-6">
-                <div className="rounded-full w-12 h-12 bg-[#66FCF1]/10 flex items-center justify-center mb-4">
-                  <MapPin className="h-6 w-6 text-[#45A29E] dark:text-[#66FCF1]" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Origin</h3>
-                <p className="text-[#1F2833]/70 dark:text-[#C5C6C7]/70">
-                  Netrawati Dabjong, Dhading, Nepal
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
+          <Card className="card-hover bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20">
+            <CardContent className="p-6">
+              <div className="rounded-full w-12 h-12 bg-[#66FCF1]/10 flex items-center justify-center mb-4">
+                <MapPin className="h-6 w-6 text-[#45A29E] dark:text-[#66FCF1]" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Origin</h3>
+              <p className="text-[#1F2833]/70 dark:text-[#C5C6C7]/70">
+                Netrawati Dabjong, Dhading, Nepal
+              </p>
+            </CardContent>
+          </Card>
 
-          <motion.div variants={itemVariants}>
-            <Card className="card-hover bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20">
-              <CardContent className="p-6">
-                <div className="rounded-full w-12 h-12 bg-[#66FCF1]/10 flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-[#45A29E] dark:text-[#66FCF1]" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Family</h3>
-                <p className="text-[#1F2833]/70 dark:text-[#C5C6C7]/70">
-                  Wife: Chandrakala Radakhu Rai
-                  <br />
-                  Daughter: Sarmin Waiba
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
+          <Card className="card-hover bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20">
+            <CardContent className="p-6">
+              <div className="rounded-full w-12 h-12 bg-[#66FCF1]/10 flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-[#45A29E] dark:text-[#66FCF1]" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Family</h3>
+              <p className="text-[#1F2833]/70 dark:text-[#C5C6C7]/70">
+                Wife: Chandrakala Radakhu Rai
+                <br />
+                Daughter: Sarmin Waiba
+              </p>
+            </CardContent>
+          </Card>
 
-          <motion.div variants={itemVariants}>
-            <Card className="card-hover bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20">
-              <CardContent className="p-6">
-                <div className="rounded-full w-12 h-12 bg-[#66FCF1]/10 flex items-center justify-center mb-4">
-                  <Heart className="h-6 w-6 text-[#45A29E] dark:text-[#66FCF1]" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Core Values</h3>
-                <p className="text-[#1F2833]/70 dark:text-[#C5C6C7]/70">
-                  Integrity, Equality, Advocacy, Service
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </motion.div>
+          <Card className="card-hover bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20">
+            <CardContent className="p-6">
+              <div className="rounded-full w-12 h-12 bg-[#66FCF1]/10 flex items-center justify-center mb-4">
+                <Heart className="h-6 w-6 text-[#45A29E] dark:text-[#66FCF1]" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Core Values</h3>
+              <p className="text-[#1F2833]/70 dark:text-[#C5C6C7]/70">
+                Integrity, Equality, Advocacy, Service
+              </p>
+            </CardContent>
+          </Card>
+        </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           {professionalHighlights.map((highlight, index) => (
-            <motion.div
+            <Card
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+              className="bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20 h-full"
             >
-              <Card className="bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20 h-full">
-                <CardContent className="p-6">
-                  <div className="rounded-full w-12 h-12 bg-[#66FCF1]/10 flex items-center justify-center mb-4">
-                    {highlight.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-[#1F2833] dark:text-[#C5C6C7]">
-                    {highlight.title}
-                  </h3>
-                  <p className="text-[#1F2833]/80 dark:text-[#C5C6C7]/80">
-                    {highlight.description}
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
+              <CardContent className="p-6">
+                <div className="rounded-full w-12 h-12 bg-[#66FCF1]/10 flex items-center justify-center mb-4">
+                  {highlight.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-[#1F2833] dark:text-[#C5C6C7]">
+                  {highlight.title}
+                </h3>
+                <p className="text-[#1F2833]/80 dark:text-[#C5C6C7]/80">
+                  {highlight.description}
+                </p>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 bg-white dark:bg-[#0B0C10]/80 p-8 rounded-lg border border-[#45A29E]/20 dark:border-[#66FCF1]/20 shadow-lg"
-        >
+        <div className="mt-16 bg-white dark:bg-[#0B0C10]/80 p-8 rounded-lg border border-[#45A29E]/20 dark:border-[#66FCF1]/20 shadow-lg">
           <h3 className="text-2xl font-semibold mb-4 text-[#1F2833] dark:text-[#C5C6C7]">
             Heritage & Background
           </h3>
@@ -233,7 +181,7 @@ export default function About() {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

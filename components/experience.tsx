@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   Building,
@@ -19,7 +18,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Experience() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
   type ExperienceItem = {
     id: string;
     company: string;
@@ -225,12 +224,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-20 bg-gray-50 dark:bg-[#1F2833]/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <div className="inline-block px-4 py-1 rounded-full bg-[#45A29E]/10 dark:bg-[#66FCF1]/10 text-[#45A29E] dark:text-[#66FCF1] font-medium text-sm mb-4">
             Career Journey
           </div>
@@ -242,13 +236,9 @@ export default function Experience() {
             and manpower, where I've developed expertise in operations
             management, client relations, and strategic leadership.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
+        <div>
           <Tabs defaultValue="hospitality" className="w-full">
             <TabsList className="grid grid-cols-3 mb-8">
               {experienceCategories.map((category) => (
@@ -271,11 +261,8 @@ export default function Experience() {
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.items.map((item, index) => (
-                    <motion.div
+                    <div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
                       onClick={() => openDialog(item)}
                       className="cursor-pointer"
                     >
@@ -311,13 +298,13 @@ export default function Experience() {
                           </div>
                         </CardContent>
                       </Card>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </TabsContent>
             ))}
           </Tabs>
-        </motion.div>
+        </div>
 
         <AnimatePresence>
           {selectedItem && (
