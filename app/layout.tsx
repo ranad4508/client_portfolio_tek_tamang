@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Tek Bahadur Tamang | Portfolio",
   description: "Personal portfolio of Tek Bahadur Tamang",
-  generator: "v0.dev",
+  generator: "dinesh",
 };
 
 export default function RootLayout({

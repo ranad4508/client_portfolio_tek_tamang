@@ -1,13 +1,15 @@
-import Navbar from "@/components/navbar"
-import Hero from "@/components/hero"
-import About from "@/components/about"
-import Education from "@/components/education"
-import Experience from "@/components/experience"
-import Travels from "@/components/travels"
-import Social from "@/components/social"
-import Political from "@/components/political"
-import Contact from "@/components/contact"
-import Footer from "@/components/footer"
+import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import About from "@/components/about";
+import Education from "@/components/education";
+import Experience from "@/components/experience";
+import Travels from "@/components/travels";
+import Social from "@/components/social";
+import Political from "@/components/political";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
+import WellnessPortfolioSection from "@/components/wellness/wellness-portfolio-section";
+import ImageGallerySection from "@/components/image-gallery-section";
 
 export default function Home() {
   return (
@@ -20,8 +22,10 @@ export default function Home() {
       <Travels />
       <Social />
       <Political />
+      <WellnessPortfolioSection />
       <Contact />
+      <ImageGallerySection />
       <Footer />
     </main>
-  )
+  );
 }

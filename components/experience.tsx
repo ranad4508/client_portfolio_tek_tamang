@@ -199,6 +199,17 @@ export default function Experience() {
           image:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdwle53J4Mv9bFxvQKhq0T0TuVPpgcmvKezA&s",
         },
+        {
+          id: "global-meta",
+          company: "Meta Global Multi Trade Pvt. Ltd.",
+          location: "in Gongabu Tokiyo Tole, Kathmandu",
+          position: "Product Coordinator",
+          period: "",
+          description:
+            "Based in Gongabu Tokiyo Tole, Meta Global Multi Trade is a dynamic company engaged in export, import, and trade of all kinds of goods, including food supplements.",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB1M1lLC3PViqssx-tW8yqICCVNWI0UcDdJA&s",
+        },
       ],
     },
     {
