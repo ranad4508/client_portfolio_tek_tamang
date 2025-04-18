@@ -13,6 +13,8 @@ const images = [
   "/Tek photo4.png",
   "/Tek photo 5.png",
   "/Tek photo 6.png",
+  "hero1.jpeg",
+  "hero2.jpeg",
 ];
 
 export default function Hero() {
@@ -86,10 +88,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-base sm:text-lg md:text-xl text-[#1F2833]/80 dark:text-[#C5C6C7] max-w-2xl mb-8"
           >
-            A passionate advocate for indigenous rights with extensive
-            experience across hospitality, media, and manpower industries.
-            Committed to social service and political activism for equality and
-            justice.
+            A passionate advocate for indigenous rights and the{" "}
+            <strong className="text-[#45A29E] dark:text-[#66FCF1]">
+              Founder General Secretary of Waiba Tamang Samaj Nepal
+            </strong>
+            , with extensive experience across hospitality, media, and manpower
+            industries. Committed to social service, political activism, and
+            advancing equality and justice for marginalized communities.
           </motion.p>
 
           <motion.div

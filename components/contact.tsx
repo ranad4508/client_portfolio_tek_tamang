@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -134,7 +135,7 @@ export default function Contact() {
           >
             <Card className="bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20 h-full">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-6 text-[#1F2833] dark:text-[#C5C6C7]">
+                <h3 className="text-xl font-semibold mb-6 text-[#1F2833] dark:text-[#C5C6C7] text-center">
                   Professional Contact Information
                 </h3>
                 <div className="space-y-6">
@@ -164,8 +165,19 @@ export default function Contact() {
                       </div>
                     </div>
                   ))}
+                  <div className="flex flex-col items-center">
+                    <div className="relative w-32 h-32 mb-4 overflow-hidden">
+                      <Image
+                        src="/laxmi.jpeg"
+                        alt="Laxmi"
+                        fill
+                        className="object-cover"
+                        priority
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-8 pt-6 border-t border-[#45A29E]/20 dark:border-[#66FCF1]/20">
+                <div className="pt-6 border-t border-[#45A29E]/20 dark:border-[#66FCF1]/20">
                   <p className="text-[#1F2833]/70 dark:text-[#C5C6C7]/70 text-sm">
                     I strive to respond to all inquiries within 24-48 hours. For
                     urgent matters, please contact me directly via WhatsApp.

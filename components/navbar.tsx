@@ -46,7 +46,7 @@ export default function Navbar() {
               href="#home"
               className="text-2xl font-bold text-[#1F2833] dark:text-[#66FCF1]"
             >
-              Tek<span className="text-[#45A29E]">Tamang</span>
+              TekBahadur<span className="text-[#45A29E]">Tamang</span>
             </Link>
           </div>
           <div className="hidden md:block">

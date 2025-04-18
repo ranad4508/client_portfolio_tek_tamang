@@ -19,7 +19,7 @@ export default function Footer() {
             className="mb-6 md:mb-0"
           >
             <Link href="#home" className="text-2xl font-bold text-[#66FCF1]">
-              Tek<span className="text-[#45A29E]">Tamang</span>
+              TekBahadur<span className="text-[#45A29E]">Tamang</span>
             </Link>
             <p className="mt-2 text-sm text-[#C5C6C7]/70 max-w-md">
               Passionate advocate for indigenous rights and social justice, with

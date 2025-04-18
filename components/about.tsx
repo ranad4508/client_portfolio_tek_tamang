@@ -8,6 +8,7 @@ import {
   Award,
   Briefcase,
   GraduationCap,
+  Flag,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -50,6 +51,26 @@ export default function About() {
             service and political advocacy.
           </p>
         </div>
+
+        {/* Featured Achievement Card */}
+        <Card className="mb-12 bg-white dark:bg-[#0B0C10]/80 border-2 border-[#45A29E] dark:border-[#66FCF1] shadow-lg">
+          <CardContent className="p-6 flex items-center">
+            <div className="rounded-full w-12 h-12 bg-[#66FCF1]/20 flex items-center justify-center mr-4 shrink-0">
+              <Flag className="h-6 w-6 text-[#45A29E] dark:text-[#66FCF1]" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-[#1F2833] dark:text-[#66FCF1]">
+                Founder General Secretary
+              </h3>
+              <p className="text-[#1F2833]/90 dark:text-[#C5C6C7]">
+                Established and currently serving as the Founder General
+                Secretary of Waiba Tamang Samaj Nepal, an organization dedicated
+                to preserving cultural heritage and advancing the welfare of the
+                Tamang community.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           <Card className="card-hover bg-white dark:bg-[#0B0C10]/80 border border-[#45A29E]/20 dark:border-[#66FCF1]/20">
