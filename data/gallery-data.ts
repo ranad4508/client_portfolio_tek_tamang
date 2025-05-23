@@ -87,4 +87,12 @@ export const galleryImages = [
     src: "/photo 20.png",
     alt: "Event Highlight 20",
   },
+  {
+    src: "/t1.png",
+    alt: "Team building",
+  },
+  {
+    src: "/t2.png",
+    alt: "Team building",
+  },
 ];

@@ -8,13 +8,15 @@ import Link from "next/link";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 const images = [
+  "/t2.png",
   "/Tek photo.png",
   "/Tek photo3.png",
   "/Tek photo4.png",
   "/Tek photo 5.png",
   "/Tek photo 6.png",
-  "hero1.jpeg",
-  "hero2.jpeg",
+  "/hero1.jpeg",
+  "/hero2.jpeg",
+  "/t1.png",
 ];
 
 export default function Hero() {
